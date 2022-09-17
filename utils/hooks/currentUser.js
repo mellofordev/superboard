@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react"
-function currentUser(){
+export default function currentUser(){
     const [user,setUser]=useState([]);
     
     useEffect(()=>{

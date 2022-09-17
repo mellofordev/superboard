@@ -8,6 +8,7 @@ export default function Home() {
     setIsloged(new_);
   },[])
   useEffect(()=>{
+
     setIsloged(localStorage.getItem('userdetail'));
     console.log('true',isloged);
   },[isloged])

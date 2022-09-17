@@ -14,8 +14,8 @@ export default function Login(props){
           console.log(errorinfo);
           alert(errorinfo.details);
         }else if(dataInfo!=undefined){
-           
-           props.onChange(localStorage.setItem('userdetail',JSON.stringify(dataInfo)));
+           console.log(dataInfo[0].user_name);
+           props.onChange(localStorage.setItem('userdetail',JSON.stringify(dataInfo[0].user_name)));
            
         }
       }else{

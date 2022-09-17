@@ -1,14 +1,11 @@
 import { useEffect,useState } from "react";
-import {currentUser} from '../../utils/hooks/currentUser';
+
 export default function Chat(props){
-    let user_;
-    let status_ ;
+
     const [partial,setPartial]=useState({});
     useEffect(()=>{
-        const partial_=props.isloged;
-        user_=partial_[0].user_name;
-        status_ =partial_[0].status;
-        setPartial(partial_[0]);
+        
+        setPartial(props.isloged);
     },[])
     return(
         <div className="room">
@@ -17,7 +14,7 @@ export default function Chat(props){
             </div>
             <div className="rightchat">
                 <h1 className="title">Chat</h1>
-                <p className="whois">your anonymous id :{partial.user_name}</p>
+                <p className="whois">your anonymous id :{partial}</p>
             
             <div className="chatarea">
 
